@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61E397B6D58043B484E19946 /* libPods-KTBTaskQueueTestsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFD00D62B4B4A83B42709F0 /* libPods-KTBTaskQueueTestsTests.a */; };
+		B0E9154718995A4E0098ADA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E9154618995A4E0098ADA9 /* Foundation.framework */; };
+		B0E9154918995A4E0098ADA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E9154818995A4E0098ADA9 /* CoreGraphics.framework */; };
+		B0E9154B18995A4E0098ADA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E9154A18995A4E0098ADA9 /* UIKit.framework */; };
+		B0E9155118995A4E0098ADA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0E9154F18995A4E0098ADA9 /* InfoPlist.strings */; };
+		B0E9155318995A4E0098ADA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E9155218995A4E0098ADA9 /* main.m */; };
+		B0E9155718995A4E0098ADA9 /* KTBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E9155618995A4E0098ADA9 /* KTBAppDelegate.m */; };
+		B0E9155918995A4E0098ADA9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E9155818995A4E0098ADA9 /* Images.xcassets */; };
+		B0E9156018995A4E0098ADA9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E9155F18995A4E0098ADA9 /* XCTest.framework */; };
+		B0E9156118995A4E0098ADA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E9154618995A4E0098ADA9 /* Foundation.framework */; };
+		B0E9156218995A4E0098ADA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E9154A18995A4E0098ADA9 /* UIKit.framework */; };
+		B0E9156A18995A4E0098ADA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0E9156818995A4E0098ADA9 /* InfoPlist.strings */; };
+		B0E9157B18995C540098ADA9 /* TaskQueueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E9157518995C540098ADA9 /* TaskQueueSpec.m */; };
+		B0E9157C18995C540098ADA9 /* TaskQueueSpecDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E9157718995C540098ADA9 /* TaskQueueSpecDelegate.m */; };
+		B0E9157D18995C540098ADA9 /* TaskQueueSpecFullDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E9157918995C540098ADA9 /* TaskQueueSpecFullDelegate.m */; };
+		B0E9157E18995C540098ADA9 /* TaskSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E9157A18995C540098ADA9 /* TaskSpec.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0E9156318995A4E0098ADA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0E9153B18995A4E0098ADA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0E9154218995A4E0098ADA9;
+			remoteInfo = KTBTaskQueueTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		539BB2267536417A97B85D7D /* Pods-KTBTaskQueueTestsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTBTaskQueueTestsTests.xcconfig"; path = "Pods/Pods-KTBTaskQueueTestsTests.xcconfig"; sourceTree = "<group>"; };
+		7EFD00D62B4B4A83B42709F0 /* libPods-KTBTaskQueueTestsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KTBTaskQueueTestsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0E9154318995A4E0098ADA9 /* KTBTaskQueueTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTBTaskQueueTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0E9154618995A4E0098ADA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B0E9154818995A4E0098ADA9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B0E9154A18995A4E0098ADA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B0E9154E18995A4E0098ADA9 /* KTBTaskQueueTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KTBTaskQueueTests-Info.plist"; sourceTree = "<group>"; };
+		B0E9155018995A4E0098ADA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B0E9155218995A4E0098ADA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B0E9155418995A4E0098ADA9 /* KTBTaskQueueTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KTBTaskQueueTests-Prefix.pch"; sourceTree = "<group>"; };
+		B0E9155518995A4E0098ADA9 /* KTBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTBAppDelegate.h; sourceTree = "<group>"; };
+		B0E9155618995A4E0098ADA9 /* KTBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTBAppDelegate.m; sourceTree = "<group>"; };
+		B0E9155818995A4E0098ADA9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B0E9155E18995A4E0098ADA9 /* KTBTaskQueueTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTBTaskQueueTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0E9155F18995A4E0098ADA9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B0E9156718995A4E0098ADA9 /* KTBTaskQueueTestsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KTBTaskQueueTestsTests-Info.plist"; sourceTree = "<group>"; };
+		B0E9156918995A4E0098ADA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B0E9157518995C540098ADA9 /* TaskQueueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskQueueSpec.m; sourceTree = "<group>"; };
+		B0E9157618995C540098ADA9 /* TaskQueueSpecDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskQueueSpecDelegate.h; sourceTree = "<group>"; };
+		B0E9157718995C540098ADA9 /* TaskQueueSpecDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskQueueSpecDelegate.m; sourceTree = "<group>"; };
+		B0E9157818995C540098ADA9 /* TaskQueueSpecFullDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskQueueSpecFullDelegate.h; sourceTree = "<group>"; };
+		B0E9157918995C540098ADA9 /* TaskQueueSpecFullDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskQueueSpecFullDelegate.m; sourceTree = "<group>"; };
+		B0E9157A18995C540098ADA9 /* TaskSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSpec.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0E9154018995A4E0098ADA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0E9154918995A4E0098ADA9 /* CoreGraphics.framework in Frameworks */,
+				B0E9154B18995A4E0098ADA9 /* UIKit.framework in Frameworks */,
+				B0E9154718995A4E0098ADA9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0E9155B18995A4E0098ADA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0E9156018995A4E0098ADA9 /* XCTest.framework in Frameworks */,
+				B0E9156218995A4E0098ADA9 /* UIKit.framework in Frameworks */,
+				B0E9156118995A4E0098ADA9 /* Foundation.framework in Frameworks */,
+				61E397B6D58043B484E19946 /* libPods-KTBTaskQueueTestsTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0E9153A18995A4E0098ADA9 = {
+			isa = PBXGroup;
+			children = (
+				B0E9154C18995A4E0098ADA9 /* KTBTaskQueueTests */,
+				B0E9156518995A4E0098ADA9 /* KTBTaskQueueTestsTests */,
+				B0E9154518995A4E0098ADA9 /* Frameworks */,
+				B0E9154418995A4E0098ADA9 /* Products */,
+				539BB2267536417A97B85D7D /* Pods-KTBTaskQueueTestsTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		B0E9154418995A4E0098ADA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0E9154318995A4E0098ADA9 /* KTBTaskQueueTests.app */,
+				B0E9155E18995A4E0098ADA9 /* KTBTaskQueueTestsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0E9154518995A4E0098ADA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0E9154618995A4E0098ADA9 /* Foundation.framework */,
+				B0E9154818995A4E0098ADA9 /* CoreGraphics.framework */,
+				B0E9154A18995A4E0098ADA9 /* UIKit.framework */,
+				B0E9155F18995A4E0098ADA9 /* XCTest.framework */,
+				7EFD00D62B4B4A83B42709F0 /* libPods-KTBTaskQueueTestsTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0E9154C18995A4E0098ADA9 /* KTBTaskQueueTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0E9155518995A4E0098ADA9 /* KTBAppDelegate.h */,
+				B0E9155618995A4E0098ADA9 /* KTBAppDelegate.m */,
+				B0E9155818995A4E0098ADA9 /* Images.xcassets */,
+				B0E9154D18995A4E0098ADA9 /* Supporting Files */,
+			);
+			path = KTBTaskQueueTests;
+			sourceTree = "<group>";
+		};
+		B0E9154D18995A4E0098ADA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0E9154E18995A4E0098ADA9 /* KTBTaskQueueTests-Info.plist */,
+				B0E9154F18995A4E0098ADA9 /* InfoPlist.strings */,
+				B0E9155218995A4E0098ADA9 /* main.m */,
+				B0E9155418995A4E0098ADA9 /* KTBTaskQueueTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0E9156518995A4E0098ADA9 /* KTBTaskQueueTestsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0E9157518995C540098ADA9 /* TaskQueueSpec.m */,
+				B0E9157A18995C540098ADA9 /* TaskSpec.m */,
+				B0E9157618995C540098ADA9 /* TaskQueueSpecDelegate.h */,
+				B0E9157718995C540098ADA9 /* TaskQueueSpecDelegate.m */,
+				B0E9157818995C540098ADA9 /* TaskQueueSpecFullDelegate.h */,
+				B0E9157918995C540098ADA9 /* TaskQueueSpecFullDelegate.m */,
+				B0E9156618995A4E0098ADA9 /* Supporting Files */,
+			);
+			path = KTBTaskQueueTestsTests;
+			sourceTree = "<group>";
+		};
+		B0E9156618995A4E0098ADA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0E9156718995A4E0098ADA9 /* KTBTaskQueueTestsTests-Info.plist */,
+				B0E9156818995A4E0098ADA9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0E9154218995A4E0098ADA9 /* KTBTaskQueueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0E9156F18995A4E0098ADA9 /* Build configuration list for PBXNativeTarget "KTBTaskQueueTests" */;
+			buildPhases = (
+				B0E9153F18995A4E0098ADA9 /* Sources */,
+				B0E9154018995A4E0098ADA9 /* Frameworks */,
+				B0E9154118995A4E0098ADA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KTBTaskQueueTests;
+			productName = KTBTaskQueueTests;
+			productReference = B0E9154318995A4E0098ADA9 /* KTBTaskQueueTests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0E9155D18995A4E0098ADA9 /* KTBTaskQueueTestsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0E9157218995A4E0098ADA9 /* Build configuration list for PBXNativeTarget "KTBTaskQueueTestsTests" */;
+			buildPhases = (
+				679E8FE3956B42F8B876EBED /* Check Pods Manifest.lock */,
+				B0E9155A18995A4E0098ADA9 /* Sources */,
+				B0E9155B18995A4E0098ADA9 /* Frameworks */,
+				B0E9155C18995A4E0098ADA9 /* Resources */,
+				4E6700041D354BA0BDD5A1FA /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0E9156418995A4E0098ADA9 /* PBXTargetDependency */,
+			);
+			name = KTBTaskQueueTestsTests;
+			productName = KTBTaskQueueTestsTests;
+			productReference = B0E9155E18995A4E0098ADA9 /* KTBTaskQueueTestsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0E9153B18995A4E0098ADA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KTB;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Little Spindle, LLC";
+				TargetAttributes = {
+					B0E9155D18995A4E0098ADA9 = {
+						TestTargetID = B0E9154218995A4E0098ADA9;
+					};
+				};
+			};
+			buildConfigurationList = B0E9153E18995A4E0098ADA9 /* Build configuration list for PBXProject "KTBTaskQueueTests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B0E9153A18995A4E0098ADA9;
+			productRefGroup = B0E9154418995A4E0098ADA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0E9154218995A4E0098ADA9 /* KTBTaskQueueTests */,
+				B0E9155D18995A4E0098ADA9 /* KTBTaskQueueTestsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0E9154118995A4E0098ADA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0E9155118995A4E0098ADA9 /* InfoPlist.strings in Resources */,
+				B0E9155918995A4E0098ADA9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0E9155C18995A4E0098ADA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0E9156A18995A4E0098ADA9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E6700041D354BA0BDD5A1FA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-KTBTaskQueueTestsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		679E8FE3956B42F8B876EBED /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0E9153F18995A4E0098ADA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0E9155718995A4E0098ADA9 /* KTBAppDelegate.m in Sources */,
+				B0E9155318995A4E0098ADA9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0E9155A18995A4E0098ADA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0E9157C18995C540098ADA9 /* TaskQueueSpecDelegate.m in Sources */,
+				B0E9157B18995C540098ADA9 /* TaskQueueSpec.m in Sources */,
+				B0E9157D18995C540098ADA9 /* TaskQueueSpecFullDelegate.m in Sources */,
+				B0E9157E18995C540098ADA9 /* TaskSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0E9156418995A4E0098ADA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0E9154218995A4E0098ADA9 /* KTBTaskQueueTests */;
+			targetProxy = B0E9156318995A4E0098ADA9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0E9154F18995A4E0098ADA9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0E9155018995A4E0098ADA9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B0E9156818995A4E0098ADA9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0E9156918995A4E0098ADA9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0E9156D18995A4E0098ADA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0E9156E18995A4E0098ADA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0E9157018995A4E0098ADA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KTBTaskQueueTests/KTBTaskQueueTests-Prefix.pch";
+				INFOPLIST_FILE = "KTBTaskQueueTests/KTBTaskQueueTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B0E9157118995A4E0098ADA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KTBTaskQueueTests/KTBTaskQueueTests-Prefix.pch";
+				INFOPLIST_FILE = "KTBTaskQueueTests/KTBTaskQueueTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B0E9157318995A4E0098ADA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 539BB2267536417A97B85D7D /* Pods-KTBTaskQueueTestsTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KTBTaskQueueTests.app/KTBTaskQueueTests";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KTBTaskQueueTests/KTBTaskQueueTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KTBTaskQueueTestsTests/KTBTaskQueueTestsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B0E9157418995A4E0098ADA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 539BB2267536417A97B85D7D /* Pods-KTBTaskQueueTestsTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KTBTaskQueueTests.app/KTBTaskQueueTests";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KTBTaskQueueTests/KTBTaskQueueTests-Prefix.pch";
+				INFOPLIST_FILE = "KTBTaskQueueTestsTests/KTBTaskQueueTestsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0E9153E18995A4E0098ADA9 /* Build configuration list for PBXProject "KTBTaskQueueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0E9156D18995A4E0098ADA9 /* Debug */,
+				B0E9156E18995A4E0098ADA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0E9156F18995A4E0098ADA9 /* Build configuration list for PBXNativeTarget "KTBTaskQueueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0E9157018995A4E0098ADA9 /* Debug */,
+				B0E9157118995A4E0098ADA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0E9157218995A4E0098ADA9 /* Build configuration list for PBXNativeTarget "KTBTaskQueueTestsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0E9157318995A4E0098ADA9 /* Debug */,
+				B0E9157418995A4E0098ADA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0E9153B18995A4E0098ADA9 /* Project object */;
+}

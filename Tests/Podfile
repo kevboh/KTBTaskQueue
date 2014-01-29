@@ -1,0 +1,5 @@
+target "KTBTaskQueueTestsTests" do
+  pod "KTBTaskQueue", :path => "../KTBTaskQueue.podspec"
+  pod 'Kiwi/XCTest'
+end
+
