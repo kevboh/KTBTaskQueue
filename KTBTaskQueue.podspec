@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "KTBTaskQueue"
-  s.version               = "1.0.0"
+  s.version               = "1.0.1"
   s.summary               = "A persistent (or not) queue to try and retry tasks until they succeed (or not)."
   s.homepage              = "https://github.com/kevboh/KTBTaskQueue"
   s.license               = 'MIT'

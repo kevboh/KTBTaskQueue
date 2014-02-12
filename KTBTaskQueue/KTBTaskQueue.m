@@ -29,6 +29,16 @@ void KTBDispatchAsyncOnMainQueue(void (^block)(void)) {
     }
 }
 
+static dispatch_queue_t task_queue_processing_queue() {
+    static dispatch_queue_t ktb_task_queue_processing_queue;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        ktb_task_queue_processing_queue = dispatch_queue_create("com.littlespindle.taskqueue.processing", DISPATCH_QUEUE_SERIAL);
+    });
+    
+    return ktb_task_queue_processing_queue;
+}
+
 const NSTimeInterval KTBTaskQueueDefaultPollingInterval = 10;
 
 @interface KTBTask (QueueAdditions)
@@ -53,14 +63,22 @@ const NSTimeInterval KTBTaskQueueDefaultPollingInterval = 10;
 @implementation KTBTaskQueue
 
 + (instancetype)queueAtPath:(NSString *)filePath {
-    return [[self alloc] initWithPath:filePath];
+    return [self queueAtPath:filePath delegate:nil];
+}
+
++ (instancetype)queueAtPath:(NSString *)filePath delegate:(id<KTBTaskQueueDelegate>)delegate {
+    return [[self alloc] initWithPath:filePath delegate:delegate];
 }
 
 + (instancetype)queueInMemory {
-    return [[self alloc] initWithPath:nil];
+    return [self queueInMemoryWithDelegate:nil];
 }
 
-- (instancetype)initWithPath:(NSString *)filePath {
++ (instancetype)queueInMemoryWithDelegate:(id<KTBTaskQueueDelegate>)delegate {
+    return [[self alloc] initWithPath:nil delegate:delegate];
+}
+
+- (instancetype)initWithPath:(NSString *)filePath delegate:(id<KTBTaskQueueDelegate>)delegate {
     self = [super init];
     if (self) {
         if (filePath) {
@@ -71,6 +89,8 @@ const NSTimeInterval KTBTaskQueueDefaultPollingInterval = 10;
         }
         
         [self setupDatabaseQueueAtPath:filePath];
+        
+        self.delegate = delegate;
         
         _suspended = NO;
         self.processing = NO;
@@ -84,7 +104,7 @@ const NSTimeInterval KTBTaskQueueDefaultPollingInterval = 10;
 }
 
 - (instancetype)init {
-    return [self initWithPath:nil];
+    return [self initWithPath:nil delegate:nil];
 }
 
 - (void)dealloc {
@@ -174,7 +194,7 @@ const NSTimeInterval KTBTaskQueueDefaultPollingInterval = 10;
 }
 
 - (void)dequeueNextTask {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+    dispatch_async(task_queue_processing_queue(), ^{
         if (self.valid && !self.suspended && !self.processing && [self hasEligibleTasks]) {
             self.processing = YES;
             KTBTask *task = [self nextTask];
@@ -205,9 +225,12 @@ const NSTimeInterval KTBTaskQueueDefaultPollingInterval = 10;
                     // Use our assigned execution block to process the task
                     self.executionBlock(task, completionBlock);
                 }
-                else {
+                else if (self.delegate) {
                     // Ask the delegate to process the task
                     [self.delegate taskQueue:self executeTask:task completion:completionBlock];
+                }
+                else {
+                    completionBlock(KTBTaskStatusFailure);
                 }
             }
             else {

@@ -8,7 +8,7 @@
 
 1. Put a task in the queue.
 2. The queue hands the task to its delegate or an execution block. Whatever is executing the task... executes the task. You decide what executing a task looks like.
-3. If the task is successful it's removed from the queue. If not, it's kept around and retried until it succeeds or it retries a `maxRetries` threshhold, after which it is abandonded and removed from the queue.
+3. If the task is successful it's removed from the queue. If not, it's kept around and retried until it succeeds or it reaches a `maxRetries` threshhold, after which it is abandonded and removed from the queue.
 
 `KTBTaskQueue` can be used to track any task you wish. I find it useful to make sure network requests are successful when online and to keep them for later when offline.
 

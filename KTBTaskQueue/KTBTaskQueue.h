@@ -58,17 +58,32 @@ typedef void(^KTBTaskQueueExecutionBlock)(KTBTask *task, KTBTaskCompletionBlock 
  */
 + (instancetype)queueAtPath:(NSString *)filePath;
 /**
+ A constuctor that returns a queue persisted at @c filePath and sets the delegate.
+ @c filePath remains the same.
+ @param filePath The location on disk to store the queue.
+ @param delegate Delegate to use for task execution.
+ @return A new disk-based queue.
+ */
++ (instancetype)queueAtPath:(NSString *)filePath delegate:(id<KTBTaskQueueDelegate>)delegate;
+/**
  A constructor that returns a queue that exists only in memory. Useful for one-off task tracking
  or testing.
  @return A new memory-based queue.
  */
 + (instancetype)queueInMemory;
 /**
+ A constructor that returns a queue that exists only in memory and sets the delegate.
+ @param delegate Delegate to use for task execution.
+ @return A new memory-based queue.
+ */
++ (instancetype)queueInMemoryWithDelegate:(id<KTBTaskQueueDelegate>)delegate;
+/**
  Designated initializer.
  @param filePath A path on disk to store the queue, or @c nil if the queue should only exist in memory.
+ @param delegate Delegate to use for task execution.
  @return A new queue.
  */
-- (instancetype)initWithPath:(NSString *)filePath;
+- (instancetype)initWithPath:(NSString *)filePath delegate:(id<KTBTaskQueueDelegate>)delegate;
 
 /**
  A shorthand way of enqueuing tasks when all you need is a name and a dictionary. Task will (almost)
