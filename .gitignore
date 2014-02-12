@@ -20,3 +20,5 @@ DerivedData
 Pods
 
 *.xccheckout
+
+/Tests/Podfile.lock
