@@ -30,7 +30,7 @@ static BOOL KTBTaskRetryWithBackoffDefault = YES;
     return [self taskWithName:name userInfo:userInfo availableDate:[NSDate date] maxRetries:KTBTaskMaxRetriesDefault useBackoff:KTBTaskRetryWithBackoffDefault];
 }
 
-+ (instancetype)taskWithName:(NSString *)name userInfo:(NSDictionary *)userInfo availableDate:(NSDate *)availableDate maxRetries:(NSUInteger)maxRetries useBackoff:(BOOL)useBackoff {
++ (instancetype)taskWithName:(NSString *)name userInfo:(NSDictionary *)userInfo availableDate:(NSDate *)availableDate maxRetries:(NSInteger)maxRetries useBackoff:(BOOL)useBackoff {
     KTBTask *task = [KTBTask new];
     task.name = name;
     task.userInfo = userInfo ?: @{};
