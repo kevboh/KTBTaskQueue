@@ -1,4 +1,5 @@
 language: objective-c
 xcode_workspace: Tests/KTBTaskQueueTests.xcworkspace
 xcode_scheme: KTBTaskQueueTests
+xcode_sdk: iphonesimulator
 podfile: Tests/Podfile

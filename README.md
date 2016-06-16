@@ -8,7 +8,7 @@
 
 1. Put a task in the queue.
 2. The queue hands the task to its delegate or an execution block. Whatever is executing the task... executes the task. You decide what executing a task looks like.
-3. If the task is successful it's removed from the queue. If not, it's kept around and retried until it succeeds or it reaches a `maxRetries` threshhold, after which it is abandonded and removed from the queue.
+3. If the task is successful it's removed from the queue. If not, it's kept around and retried until it succeeds or it reaches a `maxRetries` threshold, after which it is abandoned and removed from the queue.
 
 `KTBTaskQueue` can be used to track any task you wish. I find it useful to make sure network requests are successful when online and to keep them for later when offline.
 
@@ -21,30 +21,36 @@ it simply add the following line to your Podfile:
 
 Then in code, let’s say you use [AFNetworking](https://github.com/AFNetworking/AFNetworking) and want to make sure a particularly important POST reaches your server. You could do something like:
 
-    // You created this queue in your app delegate or view controller or model.
-    [self.queue enqueueTaskWithName:@"PostThisVitalThing" userInfo:@{"wow" : "so important"}];
+```
+// You created this queue in your app delegate or view controller or model.
+[self.queue enqueueTaskWithName:@"PostThisVitalThing" userInfo:@{"wow" : "so important"}];
+```
 
 Okay, now the queue will bug its delegate until the `PostThisVitalThing` task is complete. In the delegate:
 
-    - (void)taskQueue:(KTBTaskQueue *)queue executeTask:(KTBTask *)task completion:(KTBTaskCompletionBlock)completion {
-        // The task's userInfo is this request's parameters
-        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-        [manager POST:@"http://example.com/resources.json" parameters:task.userInfo success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSLog(@"JSON: %@", responseObject);
-            completion(KTBTaskStatusSuccess);
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"Error: %@", error);
-            completion(KTBTaskStatusFailure);
-        }];
-    }
+```
+- (void)taskQueue:(KTBTaskQueue *)queue executeTask:(KTBTask *)task completion:(KTBTaskCompletionBlock)completion {
+    // The task's userInfo is this request's parameters
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:@"http://example.com/resources.json" parameters:task.userInfo success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        completion(KTBTaskStatusSuccess);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        completion(KTBTaskStatusFailure);
+    }];
+}
+```
 
 By default, `PostThisVitalThing` will be retried after failure up to 10 times. That number can be customized, along with tons of other aspects of a task, by using a longer constructor available through `KTBTask`:
 
-    [self.queue enqueueTask:[KTBTask taskWithName:@"FutureTask"
-                                         userInfo:nil
-                                    availableDate:[NSDate dateWithTimeIntervalSinceNow:60]
-                                       maxRetries:3
-                                       useBackoff:NO]];
+```
+[self.queue enqueueTask:[KTBTask taskWithName:@"FutureTask"
+                                     userInfo:nil
+                                availableDate:[NSDate dateWithTimeIntervalSinceNow:60]
+                                   maxRetries:3
+                                   useBackoff:NO]];
+```
 
 `FutureTask` won't be attempted until a minute from now, will only be retried 3 times (for a total of four attempts), and will be retried immediately upon failure—the queue won't delay retry using its backoff technique.
 
@@ -52,28 +58,32 @@ The `KTBTaskQueueDelegate` offers more flexibility. It includes optional methods
 
 There's also an `executionBlock` property on `KTBTaskQueue` if you hate the delegate pattern:
 
-    // Set the block that does the task
-    queue.executionBlock = ^(KTBTask *task, KTBTaskCompletionBlock completion) {
-        // The task's userInfo is this request's parameters
-        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-        [manager POST:@"http://example.com/resources.json" parameters:task.userInfo success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSLog(@"JSON: %@", responseObject);
-            completion(KTBTaskStatusSuccess);
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"Error: %@", error);
-            completion(KTBTaskStatusFailure);
-        }];
-    };
-    // Enqueue the task
-    [self.queue enqueueTaskWithName:@"PostThisVitalThing" userInfo:@{"wow" : "so important"}];
+```
+// Set the block that does the task
+queue.executionBlock = ^(KTBTask *task, KTBTaskCompletionBlock completion) {
+    // The task's userInfo is this request's parameters
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:@"http://example.com/resources.json" parameters:task.userInfo success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        completion(KTBTaskStatusSuccess);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        completion(KTBTaskStatusFailure);
+    }];
+};
+// Enqueue the task
+[self.queue enqueueTaskWithName:@"PostThisVitalThing" userInfo:@{"wow" : "so important"}];
+```
 
 Also worth mentioning is the `KTBTaskAlwaysRetry` value, which will prevent a queue from abandoning a task due to too many retries:
 
-    [self.queue enqueueTask:[KTBTask taskWithName:@"IReallyWantThisDone"
-                                         userInfo:nil
-                                    availableDate:nil
-                                       maxRetries:KTBTaskAlwaysRetry
-                                       useBackoff:YES]];
+```
+[self.queue enqueueTask:[KTBTask taskWithName:@"IReallyWantThisDone"
+                                     userInfo:nil
+                                availableDate:nil
+                                   maxRetries:KTBTaskAlwaysRetry
+                                   useBackoff:YES]];
+```
 
 This task is available immediately (`availableDate` defaults to now) and will retry until it succeeds or the Earth is dust (or you drop your phone in the toilet). Whichever comes first.
 
@@ -87,11 +97,10 @@ Please feel free to open issues and submit pull requests here. Thanks!
 
 ## Author
 
-Kevin Barrett, kevin@littlespindle.com
+Kevin Barrett, kevin@kevboh.com
 
-If this helps you out or you think it's neat, check out the app that inspired it: http://airendipity.com.
+Like this sort of thing? Check out [Postlight](https://www.postlight.com), a digital agency that builds big, beautiful sites and apps.
 
 ## License
 
 KTBTaskQueue is available under the MIT license. See the LICENSE file for more info.
-
