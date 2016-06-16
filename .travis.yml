@@ -1,4 +1,6 @@
 language: objective-c
+before_script:
+  - cd Test/
 xcode_workspace: Tests/KTBTaskQueueTests.xcworkspace
 xcode_scheme: KTBTaskQueueTests
 xcode_sdk: iphonesimulator
