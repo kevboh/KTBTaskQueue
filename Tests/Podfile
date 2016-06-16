@@ -8,7 +8,7 @@ target 'KTBTaskQueueTests' do
   # Pods for KTBTaskQueueTests
 
   target 'KTBTaskQueueTestsTests' do
-    inherit! :search_paths
+    # inherit! :search_paths
     pod "KTBTaskQueue", :path => "../KTBTaskQueue.podspec"
     pod 'Kiwi'
   end
