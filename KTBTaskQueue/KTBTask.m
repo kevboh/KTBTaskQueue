@@ -74,8 +74,8 @@ static BOOL KTBTaskRetryWithBackoffDefault = YES;
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"Task %@: %@ (%d retries, next available %@), userInfo: %@",
-            self.taskID, self.name, self.retryCount, self.availableDate, self.userInfo];
+    return [NSString stringWithFormat:@"Task %@: %@ (%ld retries, next available %@), userInfo: %@",
+            self.taskID, self.name, (long)self.retryCount, self.availableDate, self.userInfo];
 }
 
 @end

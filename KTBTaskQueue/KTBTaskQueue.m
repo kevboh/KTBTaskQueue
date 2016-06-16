@@ -453,7 +453,7 @@ const NSTimeInterval KTBTaskQueueDefaultPollingInterval = 10;
 
 - (NSString *)description {
     NSMutableString *description = [NSMutableString new];
-    [description appendFormat:@"KTBTaskQueue (%d tasks):\n", [self numberOfTasks]];
+    [description appendFormat:@"KTBTaskQueue (%ld tasks):\n", (long)[self numberOfTasks]];
     [self.databaseQueue inDatabase:^(FMDatabase *db) {
         FMResultSet *resultSet = [db executeQuery:@"SELECT * FROM tasks ORDER BY availableDate ASC"];
         [self checkErrorForDatabase:db stepDescription:@"dumping task list"];

@@ -36,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		539BB2267536417A97B85D7D /* Pods-KTBTaskQueueTestsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTBTaskQueueTestsTests.xcconfig"; path = "Pods/Pods-KTBTaskQueueTestsTests.xcconfig"; sourceTree = "<group>"; };
 		7EFD00D62B4B4A83B42709F0 /* libPods-KTBTaskQueueTestsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KTBTaskQueueTestsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E9154318995A4E0098ADA9 /* KTBTaskQueueTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTBTaskQueueTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E9154618995A4E0098ADA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,6 +58,8 @@
 		B0E9157818995C540098ADA9 /* TaskQueueSpecFullDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskQueueSpecFullDelegate.h; sourceTree = "<group>"; };
 		B0E9157918995C540098ADA9 /* TaskQueueSpecFullDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskQueueSpecFullDelegate.m; sourceTree = "<group>"; };
 		B0E9157A18995C540098ADA9 /* TaskSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSpec.m; sourceTree = "<group>"; };
+		B4F60AD4A89FB54655BEE590 /* Pods-KTBTaskQueueTestsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTBTaskQueueTestsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KTBTaskQueueTestsTests/Pods-KTBTaskQueueTestsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5B0C9609D29DEA56CCCE7E8 /* Pods-KTBTaskQueueTestsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTBTaskQueueTestsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KTBTaskQueueTestsTests/Pods-KTBTaskQueueTestsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +94,7 @@
 				B0E9156518995A4E0098ADA9 /* KTBTaskQueueTestsTests */,
 				B0E9154518995A4E0098ADA9 /* Frameworks */,
 				B0E9154418995A4E0098ADA9 /* Products */,
-				539BB2267536417A97B85D7D /* Pods-KTBTaskQueueTestsTests.xcconfig */,
+				DB06365714247A60092FFF7C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +164,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DB06365714247A60092FFF7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4F60AD4A89FB54655BEE590 /* Pods-KTBTaskQueueTestsTests.debug.xcconfig */,
+				B5B0C9609D29DEA56CCCE7E8 /* Pods-KTBTaskQueueTestsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,11 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0E9157218995A4E0098ADA9 /* Build configuration list for PBXNativeTarget "KTBTaskQueueTestsTests" */;
 			buildPhases = (
-				679E8FE3956B42F8B876EBED /* Check Pods Manifest.lock */,
+				679E8FE3956B42F8B876EBED /* [CP] Check Pods Manifest.lock */,
 				B0E9155A18995A4E0098ADA9 /* Sources */,
 				B0E9155B18995A4E0098ADA9 /* Frameworks */,
 				B0E9155C18995A4E0098ADA9 /* Resources */,
-				4E6700041D354BA0BDD5A1FA /* Copy Pods Resources */,
+				4E6700041D354BA0BDD5A1FA /* [CP] Copy Pods Resources */,
+				F2C22AABCD5BE7572DCC5239 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,7 +221,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = KTB;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Little Spindle, LLC";
 				TargetAttributes = {
 					B0E9155D18995A4E0098ADA9 = {
@@ -257,34 +268,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E6700041D354BA0BDD5A1FA /* Copy Pods Resources */ = {
+		4E6700041D354BA0BDD5A1FA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-KTBTaskQueueTestsTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KTBTaskQueueTestsTests/Pods-KTBTaskQueueTestsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		679E8FE3956B42F8B876EBED /* Check Pods Manifest.lock */ = {
+		679E8FE3956B42F8B876EBED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F2C22AABCD5BE7572DCC5239 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KTBTaskQueueTestsTests/Pods-KTBTaskQueueTestsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -344,7 +370,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -359,6 +384,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -384,7 +410,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -422,6 +447,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KTBTaskQueueTests/KTBTaskQueueTests-Prefix.pch";
 				INFOPLIST_FILE = "KTBTaskQueueTests/KTBTaskQueueTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.littlespindle.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -435,6 +461,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KTBTaskQueueTests/KTBTaskQueueTests-Prefix.pch";
 				INFOPLIST_FILE = "KTBTaskQueueTests/KTBTaskQueueTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.littlespindle.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -442,9 +469,8 @@
 		};
 		B0E9157318995A4E0098ADA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 539BB2267536417A97B85D7D /* Pods-KTBTaskQueueTestsTests.xcconfig */;
+			baseConfigurationReference = B4F60AD4A89FB54655BEE590 /* Pods-KTBTaskQueueTestsTests.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KTBTaskQueueTests.app/KTBTaskQueueTests";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -458,6 +484,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "KTBTaskQueueTestsTests/KTBTaskQueueTestsTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.littlespindle.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -466,9 +493,8 @@
 		};
 		B0E9157418995A4E0098ADA9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 539BB2267536417A97B85D7D /* Pods-KTBTaskQueueTestsTests.xcconfig */;
+			baseConfigurationReference = B5B0C9609D29DEA56CCCE7E8 /* Pods-KTBTaskQueueTestsTests.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KTBTaskQueueTests.app/KTBTaskQueueTests";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -478,6 +504,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KTBTaskQueueTests/KTBTaskQueueTests-Prefix.pch";
 				INFOPLIST_FILE = "KTBTaskQueueTestsTests/KTBTaskQueueTestsTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.littlespindle.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
