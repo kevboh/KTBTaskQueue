@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07C30BCC286D823EAD0E9601 /* libPods-KTBTaskQueueTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8742EFF9AB1E4BEEC2C93E67 /* libPods-KTBTaskQueueTests.a */; };
 		61E397B6D58043B484E19946 /* libPods-KTBTaskQueueTestsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFD00D62B4B4A83B42709F0 /* libPods-KTBTaskQueueTestsTests.a */; };
 		B0E9154718995A4E0098ADA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E9154618995A4E0098ADA9 /* Foundation.framework */; };
 		B0E9154918995A4E0098ADA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E9154818995A4E0098ADA9 /* CoreGraphics.framework */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		7EFD00D62B4B4A83B42709F0 /* libPods-KTBTaskQueueTestsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KTBTaskQueueTestsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D132B56D2B2EF5AA2C9498 /* Pods-KTBTaskQueueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTBTaskQueueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KTBTaskQueueTests/Pods-KTBTaskQueueTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8742EFF9AB1E4BEEC2C93E67 /* libPods-KTBTaskQueueTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KTBTaskQueueTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E9154318995A4E0098ADA9 /* KTBTaskQueueTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTBTaskQueueTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E9154618995A4E0098ADA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B0E9154818995A4E0098ADA9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,6 +61,7 @@
 		B0E9157818995C540098ADA9 /* TaskQueueSpecFullDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskQueueSpecFullDelegate.h; sourceTree = "<group>"; };
 		B0E9157918995C540098ADA9 /* TaskQueueSpecFullDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskQueueSpecFullDelegate.m; sourceTree = "<group>"; };
 		B0E9157A18995C540098ADA9 /* TaskSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSpec.m; sourceTree = "<group>"; };
+		B1D19E540D84FA89675EFC64 /* Pods-KTBTaskQueueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTBTaskQueueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KTBTaskQueueTests/Pods-KTBTaskQueueTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4F60AD4A89FB54655BEE590 /* Pods-KTBTaskQueueTestsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTBTaskQueueTestsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KTBTaskQueueTestsTests/Pods-KTBTaskQueueTestsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5B0C9609D29DEA56CCCE7E8 /* Pods-KTBTaskQueueTestsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KTBTaskQueueTestsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KTBTaskQueueTestsTests/Pods-KTBTaskQueueTestsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +74,7 @@
 				B0E9154918995A4E0098ADA9 /* CoreGraphics.framework in Frameworks */,
 				B0E9154B18995A4E0098ADA9 /* UIKit.framework in Frameworks */,
 				B0E9154718995A4E0098ADA9 /* Foundation.framework in Frameworks */,
+				07C30BCC286D823EAD0E9601 /* libPods-KTBTaskQueueTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +120,7 @@
 				B0E9154A18995A4E0098ADA9 /* UIKit.framework */,
 				B0E9155F18995A4E0098ADA9 /* XCTest.framework */,
 				7EFD00D62B4B4A83B42709F0 /* libPods-KTBTaskQueueTestsTests.a */,
+				8742EFF9AB1E4BEEC2C93E67 /* libPods-KTBTaskQueueTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,6 +175,8 @@
 			children = (
 				B4F60AD4A89FB54655BEE590 /* Pods-KTBTaskQueueTestsTests.debug.xcconfig */,
 				B5B0C9609D29DEA56CCCE7E8 /* Pods-KTBTaskQueueTestsTests.release.xcconfig */,
+				86D132B56D2B2EF5AA2C9498 /* Pods-KTBTaskQueueTests.debug.xcconfig */,
+				B1D19E540D84FA89675EFC64 /* Pods-KTBTaskQueueTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -180,9 +188,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0E9156F18995A4E0098ADA9 /* Build configuration list for PBXNativeTarget "KTBTaskQueueTests" */;
 			buildPhases = (
+				8AFFABD9E3D66D182EC290AD /* [CP] Check Pods Manifest.lock */,
 				B0E9153F18995A4E0098ADA9 /* Sources */,
 				B0E9154018995A4E0098ADA9 /* Frameworks */,
 				B0E9154118995A4E0098ADA9 /* Resources */,
+				C49B1C6FA50E2D6C7A969F8C /* [CP] Embed Pods Frameworks */,
+				B42D357DA650F91839D28ED7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,6 +307,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8AFFABD9E3D66D182EC290AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B42D357DA650F91839D28ED7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KTBTaskQueueTests/Pods-KTBTaskQueueTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C49B1C6FA50E2D6C7A969F8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KTBTaskQueueTests/Pods-KTBTaskQueueTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F2C22AABCD5BE7572DCC5239 /* [CP] Embed Pods Frameworks */ = {
@@ -441,6 +497,7 @@
 		};
 		B0E9157018995A4E0098ADA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86D132B56D2B2EF5AA2C9498 /* Pods-KTBTaskQueueTests.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -455,6 +512,7 @@
 		};
 		B0E9157118995A4E0098ADA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1D19E540D84FA89675EFC64 /* Pods-KTBTaskQueueTests.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
