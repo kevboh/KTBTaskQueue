@@ -79,7 +79,7 @@ This task is available immediately (`availableDate` defaults to now) and will re
 
 ## Requirements
 
-ARC, iOS 6+, and [FMDB](https://github.com/ccgus/fmdb) by Gus Mueller. FMDB will be imported automatically by Cocoapods. Don't worry; it's super-small.
+ARC, iOS 6+, and [FMDB](https://github.com/ccgus/fmdb) by Gus Mueller. FMDB will be imported automatically by CocoaPods. Don't worry; it's super-small.
 
 ## Feedback
 
